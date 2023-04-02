@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    padding:30px 0;
+    background-color: yellow;
+}
+
+.row,.row::after,.row::before{
+    display:table;
+    width:100%;
+    clear:both;
+}
+
+.col-4{
+    width:100%;
+    position:relative;
+}
+.col-8{
+    width:100%;
+}
+
+[class^="col"]{
+    /* float:left; */
+    padding:0 15px;
+}
+
+.navbar li{
+    /* display:inline-block; */
+    /* width:100%; */
+    list-style: none;
+    margin-bottom:15px;
+}
+
+.text-right{
+    text-align: left;
+}
+
+.navbar li a:link,.navbar li a:visited{
+    display: inline-block;
+    color:rgb(9, 9, 10);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight:900;
+    font-size: 18px;
+    padding:10px 15px;
+    width:100%;
+    border-radius: 5px;
+    transition:all 0.3s ease-in-out;
+}
+
+.logo:link,.logo:visited{
+    display:inline-block;
+    text-decoration: none;
+    padding:10px 15px;
+    font-size: 24px;
+    font-weight: 900;
+    color:tomato
+}
+
+.navbar li a:hover,.navbar li a:active,.navbar li a:focus{
+    color:yellow;
+    background-color: #000;
+}
+
+.navbar{
+    display: block;
+}
+
+.bar{
+    display:inline-block;
+    position: absolute;
+    top:0;
+    right:20px;
+    bottom:0;
+    padding:10px 15px;
+}
+
+@media all and (min-width:601px){
+    .col-4{
+        width:calc(100% * 4 / 12);
+    }
+
+    .col-8{
+        width:calc(100% * 8 / 12);
+    }
+
+    .bar{
+        display: none;
+        
+    }
+    
+   
+    [class^='col']{
+        float:left
+    }
+
+    .navbar li {
+        display:inline-block;
+        margin-bottom:0px;
+        margin-right:15px;
+         
+    }
+
+    .navbar li a:link,.logo:link,.navbar li a:visited,.logo:visited{
+        display: inline-block;
+        text-decoration: none;
+        text-transform: capitalize;
+        font-weight:900;
+        font-size: 22px;
+        padding:0px 10px ;
+        border-radius: 5px;
+        transition: all 0.5s ease-in-out;
+        line-height: 57px;
+    }
+    .text-right{
+        text-align: right;
+    }
+
+    #logoid{
+        font-size: 32px;
+    }
+
+    
+} 
